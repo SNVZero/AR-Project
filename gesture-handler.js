@@ -6,6 +6,7 @@ AFRAME.registerComponent("gesture-handler", {
     rotationFactor: { default: 5 },
     minScale: { default: 0.3 },
     maxScale: { default: 8 },
+	 positionFactor: { default: 0.003},
   },
   //Функция инициализации событий
 
@@ -35,7 +36,7 @@ AFRAME.registerComponent("gesture-handler", {
 		
 		
     } else {
-      this.el.sceneEl.removeEventListener("onefingermove", this.handlePosition);
+      this.el.sceneEl.removeEventListener("onefingermove", this.handleRotation);
       this.el.sceneEl.removeEventListener("twofingermove", this.handleScale);
 		this.el.sceneEl.addEventListener("threefingermove", this.handlePosition);
 
@@ -75,8 +76,9 @@ AFRAME.registerComponent("gesture-handler", {
 
   handlePosition: function(event){
 	if(this.isVisible){
-		this.el.object3D.position.z += 0.02;
-			
+		this.el.object3D.position.z += event.detail.positionChange.z * this.data.positionFactor ;
+		this.el.object3D.position.y += event.detail.positionChange.y * this.data.positionFactor ;	
+		this.el.object3D.position.x += event.detail.positionChange.x * this.data.positionFactor ;
 	}
   }
 });
