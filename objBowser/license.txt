@@ -1,0 +1,11 @@
+Model Information:
+* title:	bowser
+* source:	https://sketchfab.com/3d-models/bowser-fa17f94ae350416f86c35db7c0e129c3
+* author:	Santiago Espinoza (https://sketchfab.com/santiago3052008)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "bowser" (https://sketchfab.com/3d-models/bowser-fa17f94ae350416f86c35db7c0e129c3) by Santiago Espinoza (https://sketchfab.com/santiago3052008) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
