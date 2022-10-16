@@ -29,12 +29,15 @@ AFRAME.registerComponent("gesture-handler", {
 
   update: function () {
     if (this.data.enabled) {
-      this.el.sceneEl.addEventListener("onefingermove", this.handlePosition);
+      this.el.sceneEl.addEventListener("onefingermove", this.handleRotation);
       this.el.sceneEl.addEventListener("twofingermove", this.handleScale);
+		this.el.sceneEl.addEventListener("threefingermove", this.handlePosition);
+		
 		
     } else {
       this.el.sceneEl.removeEventListener("onefingermove", this.handlePosition);
       this.el.sceneEl.removeEventListener("twofingermove", this.handleScale);
+		this.el.sceneEl.addEventListener("threefingermove", this.handlePosition);
 
     }
   },
@@ -72,7 +75,7 @@ AFRAME.registerComponent("gesture-handler", {
 
   handlePosition: function(event){
 	if(this.isVisible){
-		this.el.object3D.position.x += 2;
+		this.el.object3D.position.z += 0.02;
 			
 	}
   }
